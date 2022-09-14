@@ -22,7 +22,13 @@ namespace CharacterLookupMVC.Controllers
         // GET: WordController/Details/5
         public ActionResult Details(string id)
         {
+            id = id.Trim();
             if (string.IsNullOrWhiteSpace(id) || id.Length != 1)
+            {
+                return View();
+            }
+
+            if (!words.ContainsKey(id[0]))
             {
                 return View();
             }
