@@ -46,6 +46,19 @@
     }
 </div>
 <div>
+    <hr />
+    @using (Html.BeginForm("Details","Word",FormMethod.Get,new {@class= "form-inline" }))
+    {
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="padding-right: 5px; display:inline;">继续查询:</div><input type="text" name="id" class="box-shadow--4dp" placeholder="例" />
+                <input type="submit" class="btn-default box-shadow--4dp" value="查询" />
+            </div>
+        </div>
+    }
+</div>
+<div>
+    <hr />
     @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     <a asp-action="Index">Back to List</a> |*@
     @{

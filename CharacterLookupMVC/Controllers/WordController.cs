@@ -1,9 +1,11 @@
 ﻿using CharacterLookupMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CharacterLookupMVC.Controllers
 {
+    [AllowAnonymous]
     public class WordController : Controller
     {
         static Dictionary<char, Word> words = new Dictionary<char, Word>();
